@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Phamtastic University</title>
-		<style>
-			.banner {
-				width: 100%;
-				height: auto;
-			}
-			body {
-				background-color: #FFFFFF; /* Replace with your desired color */
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<img src="images/Banner.png" alt="Banner" class="banner">
-		</header>
-		<!-- Other content -->
-		<h1 style="color: #003060; font-family: Georgia, 'Times New Roman', Times, serif;">Mathematics</h1>
-		<a href="/math121/index.html"; style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 121: Multivariable Calculus</a>
-		<br><br>
-		<a href="/"; style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 122: Linear Algebra</a>
-		<br><br>
-		<a href="/"; style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 131: Discrete Mathematics</a>
-		<br><br>
-	</body>
-	</body>
-	<script>
-		var links = document.body.getElementsByTagName("a")
-		var a = window.location.href.indexOf(".io")
-		var repo_name = window.location.href.substring(a+3)
-		for(var i = 0; i < links.length; i++){
-			var link = links[i]
-			var actual_name = link.href.substring(link.href.indexOf(".io")+4)
-			link.href = repo_name + actual_name
-		}
-	</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phamtastic University</title>
+    <style>
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+        body {
+            background-color: #FFFFFF; /* Replace with your desired color */
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .column {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .column h1 {
+            margin-bottom: 20px;
+            text-align: left;
+            color: #003060;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .column a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .column a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/Banner.png" alt="Banner" class="banner">
+    </header>
+    <div class="container">
+        <div class="column">
+            <h1>Mathematics</h1>
+            <a href="math121/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 121: Multivariable Calculus</a>
+            <a href="math122/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 122: Linear Algebra</a>
+            <a href="math131/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 131: Discrete Mathematics</a>
+        </div>
+        <div class="column">
+            <h1>Physics</h1>
+        </div>
+        <div class="column">
+            <h1>Computer Science</h1>
+        </div>
+    </div>
+    <script>
+        var links = document.body.getElementsByTagName("a");
+        var a = window.location.href.indexOf(".io");
+        if (a !== -1) {
+            var repo_name = window.location.href.substring(a + 3);
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                var actual_name = link.href.substring(link.href.indexOf(".io") + 3);
+                link.href = repo_name + actual_name;
+            }
+        }
+    </script>
+</body>
 </html>
