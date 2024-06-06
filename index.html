@@ -58,5 +58,17 @@
             <h1>Computer Science</h1>
         </div>
     </div>
+    <script>
+        var links = document.body.getElementsByTagName("a");
+        var a = window.location.href.indexOf(".io");
+        if (a !== -1) {
+            var repo_name = window.location.href.substring(a + 3);
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                var actual_name = link.href.substring(link.href.indexOf(".io") + 3);
+                link.href = repo_name + actual_name;
+            }
+        }
+    </script>
 </body>
 </html>
