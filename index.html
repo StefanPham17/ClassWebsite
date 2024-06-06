@@ -46,10 +46,10 @@
     <div class="container">
         <div class="column">
             <h1>Mathematics</h1>
-            <a href="/math121/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 121: Multivariable Calculus</a>
-            <a href="/math122/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 122: Linear Algebra</a>
-			<a href="/math124/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 124: Differential Equations</a>
-            <a href="/math131/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 131: Discrete Mathematics</a>
+            <a href="math121/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 121: Multivariable Calculus</a>
+            <a href="math122/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 122: Linear Algebra</a>
+			<a href="math124/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 124: Differential Equations</a>
+            <a href="math131/index.html" style="color: #003080; font-family: Georgia, 'Times New Roman', Times, serif;">MATH 131: Discrete Mathematics</a>
         </div>
         <div class="column">
             <h1>Physics</h1>
@@ -58,17 +58,5 @@
             <h1>Computer Science</h1>
         </div>
     </div>
-    <script>
-        var links = document.body.getElementsByTagName("a");
-        var a = window.location.href.indexOf(".io");
-        if (a !== -1) {
-            var repo_name = window.location.href.substring(a + 3);
-            for (var i = 0; i < links.length; i++) {
-                var link = links[i];
-                var actual_name = link.href.substring(link.href.indexOf(".io") + 3);
-                link.href = repo_name + actual_name;
-            }
-        }
-    </script>
 </body>
 </html>
